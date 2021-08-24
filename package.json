@@ -7,7 +7,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "prepublish": "yarn run build",
-    "build": "rmdir /s /q dist && rollup -c && yarn run tsc",
+    "build": "rollup -c && yarn run tsc",
     "build-test": "yarn run build && node scripts/build-test.js",
     "lint": "eslint src/*.ts test/*.js scripts/*.js",
     "prettier": "prettier --write 'src/*.ts' && prettier --write 'test/*.js' && prettier --write 'scripts/*.js'",
